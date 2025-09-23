@@ -6,7 +6,7 @@ import CustomButton from "@/components/CustomButton";
 export const Header = () => {
   return (
     <header className="sticky top-0">
-      <div className="flex justify-center items-center gap-4 h-[40px] bg-black text-sm">
+      <div className="flex justify-center items-center gap-3 h-[40px] bg-black text-sm">
         <p className="font-normal text-white hidden md:block">
           Streamline your workflow and boost your productivity.
         </p>
