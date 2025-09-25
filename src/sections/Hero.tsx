@@ -3,6 +3,7 @@ import ArrowRight from "@/assets/arrow-right.svg";
 import CogImage from "@/assets/cog.png";
 import Image from "next/image";
 import CylinderImage from "@/assets/cylinder.png";
+import NoodleImage from "@/assets/noodle.png";
 
 export const Hero = () => {
   return (
@@ -37,7 +38,7 @@ export const Hero = () => {
             <Image
               src={CogImage}
               alt="cog image"
-              className="md:h-full md:w-auto md:absolute md:max-w-none md:-left-6"
+              className="md:h-full md:w-auto md:absolute md:max-w-none md:-left-6 lg:left-0"
             />
             <Image
               src={CylinderImage}
@@ -45,6 +46,13 @@ export const Hero = () => {
               width={220}
               height={220}
               className="hidden md:block md:absolute -top-8 -left-32"
+            />
+            <Image
+              src={NoodleImage}
+              alt="noodle image"
+              width={220}
+              height={220}
+              className="hidden lg:block lg:absolute rotate-[30deg] left-[448px] top-[524px]"
             />
           </div>
         </div>
