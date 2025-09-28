@@ -1,3 +1,5 @@
+import ProductImage from "@/assets/product-image.png";
+import Image from "next/image";
 export const ProductShowcase = () => {
   return (
     <div className="section py-24 px-5">
@@ -12,6 +14,9 @@ export const ProductShowcase = () => {
           Celebrate the joy of accomplishment with an app designed to track your
           progress and motivate your efforts.
         </p>
+      </div>
+      <div>
+        <Image src={ProductImage} alt="product image" />
       </div>
     </div>
   );
