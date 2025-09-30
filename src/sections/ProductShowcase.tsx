@@ -1,9 +1,10 @@
 import ProductImage from "@/assets/product-image.png";
 import PyramidImage from "@/assets/pyramid.png";
+import TubeImage from "@/assets/tube.png";
 import Image from "next/image";
 export const ProductShowcase = () => {
   return (
-    <div className="section py-24 px-5 bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] relative">
+    <div className="section py-24 px-5 bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] relative overflow-x-clip">
       <div className="flex justify-center items-center">
         <div className="flex flex-col justify-center gap-4 items-center max-w-[728px] lg:max-w-[1040px">
           <h4 className="text-sm inline-flex border border-[#222222/10] px-3 py-1 rounded-lg">
@@ -22,15 +23,22 @@ export const ProductShowcase = () => {
       <div>
         <Image src={ProductImage} alt="product image" />
       </div>
-      <div>
-        <Image
-          src={PyramidImage}
-          alt="pyramid image"
-          width={262}
-          height={262}
-          className="hidden md:block md:top-[286px] md:left-[630px] md:absolute lg:left-[1002px]"
-        />
-      </div>
+
+      <Image
+        src={PyramidImage}
+        alt="pyramid image"
+        width={262}
+        height={262}
+        className="hidden md:block md:top-[286px] md:left-[630px] md:absolute lg:left-[1002px]"
+      />
+
+      <Image
+        src={TubeImage}
+        alt="tube image"
+        width={248}
+        height={248}
+        className="hidden md:block md:top-[576px] md:left-[-124px] md:absolute lg:right-[1002px] lg:left-[-64px] lg:top-[742px]"
+      />
     </div>
   );
 };
