@@ -16,10 +16,10 @@ export const Hero = () => {
               Version 2.0 is here
             </h4>
             {/* </div> */}
-            <h1 className="font-bold text-5xl md:text-7xl tracking-tight bg-gradient-to-b from-black to-blue-800 text-transparent bg-clip-text my-6">
+            <h1 className="section-header">
               Pathway to productivity
             </h1>
-            <p className="text-xl font-normal leading-[28px] tracking-[-2.5%] mb-[30px] text-[#010D3E]">
+            <p className="section-paragraph">
               Celebrate the joy of accomplishment with an app designed to track
               your progress, motivate your efforts, and celebrate your
               successes.
