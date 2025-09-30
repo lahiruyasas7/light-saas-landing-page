@@ -1,3 +1,5 @@
+import PricingWhiteCard from "@/components/PricingWhiteCard";
+
 const pricingTiers = [
   {
     title: "Free",
@@ -51,5 +53,20 @@ const pricingTiers = [
 ];
 
 export const Pricing = () => {
-  return null;
+  return (
+    <section className="py-24 px-5">
+      <div className="container">
+        <h2 className="section-header">Pricing </h2>
+        <p className="section-description">
+          Free forever. Upgrade for unlimited tasks, better security, and
+          exclusive features.
+        </p>
+        <div className="pt-10 flex flex-col gap-6">
+          {pricingTiers.map((tier) => (
+          <PricingWhiteCard data={tier}/>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
