@@ -10,7 +10,7 @@ function PricingWhiteCard({ data }: any) {
       </h3>
       <div className="mb-5">
         <span className="font-bold text-4xl">${data?.monthlyPrice}</span>
-        <span className="text-base font-bold text-[#000000/50]"> /month</span>
+        <span className="text-base font-bold text-[#000000]/50"> /month</span>
       </div>
       <CustomButton width="w-full">{data?.buttonText}</CustomButton>
       <ul className="mt-5">
