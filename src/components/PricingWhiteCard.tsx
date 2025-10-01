@@ -6,7 +6,7 @@ function PricingWhiteCard({ data }: any) {
 
   return (
     <div
-      className={`rounded-3xl shadow-md p-10 w-[320px] min-h-[470px] max-w-sm border-2 transition-colors duration-300 ${
+      className={`rounded-3xl shadow-md p-10 w-[320px] min-h-[476px] max-w-sm border-2 transition-colors duration-300 ${
         isPopular
           ? "bg-black text-white border-white"
           : "bg-white text-black border-[#F1F1F1]"
