@@ -12,14 +12,21 @@ function PricingWhiteCard({ data }: any) {
           : "bg-white text-black border-[#F1F1F1]"
       }`}
     >
-      {/* Title */}
-      <h3
-        className={`text-lg font-bold mb-5 ${
-          isPopular ? "text-white/50" : "text-black/50"
-        }`}
-      >
-        {data?.title}
-      </h3>
+      <div className="mb-5 flex justify-between items-center ">
+        {/* Title */}
+        <h3
+          className={`text-lg font-bold  ${
+            isPopular ? "text-white/50" : "text-black/50"
+          }`}
+        >
+          {data?.title}
+        </h3>
+        {isPopular && (
+          <h4 className="px-[16px] py-[6px] border rounded-xl bg-gradient-to-r from-[#dd7dff] via-[#e1cd86] via-[#8bcb92] via-[#71c2ef] via-[#3bffff] to-[#dd7dff] bg-clip-text text-transparent">
+            Most Popular
+          </h4>
+        )}
+      </div>
 
       {/* Price */}
       <div className="mb-5">
