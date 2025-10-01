@@ -2,22 +2,57 @@ import React from "react";
 import CustomButton from "./CustomButton";
 
 function PricingWhiteCard({ data }: any) {
-  console.log(data);
+  const isPopular = data?.popular;
+
   return (
-    <div className="bg-white rounded-lg shadow-md p-10 w-[320px] min-h-[470px] max-w-sm">
-      <h3 className="text-lg font-bold text-[#000000]/50 mb-5">
+    <div
+      className={`rounded-3xl shadow-md p-10 w-[320px] min-h-[470px] max-w-sm border-2 transition-colors duration-300 ${
+        isPopular
+          ? "bg-black text-white border-white"
+          : "bg-white text-black border-[#F1F1F1]"
+      }`}
+    >
+      {/* Title */}
+      <h3
+        className={`text-lg font-bold mb-5 ${
+          isPopular ? "text-white/50" : "text-black/50"
+        }`}
+      >
         {data?.title}
       </h3>
+
+      {/* Price */}
       <div className="mb-5">
         <span className="font-bold text-4xl">${data?.monthlyPrice}</span>
-        <span className="text-base font-bold text-[#000000]/50"> /month</span>
+        <span
+          className={`text-base font-bold ${
+            isPopular ? "text-white/50" : "text-black/50"
+          }`}
+        >
+          {" "}
+          /month
+        </span>
       </div>
-      <CustomButton width="w-full">{data?.buttonText}</CustomButton>
+
+      {/* Button (optional: you might also invert this inside CustomButton) */}
+      <CustomButton
+        width="w-full"
+        bgColor={isPopular ? "bg-white" : "bg-black"}
+        textColor={isPopular ? "text-black" : "text-white"}
+      >
+        {data?.buttonText}
+      </CustomButton>
+
+      {/* Feature list */}
       <ul className="mt-5">
         {data?.features.map((feature: string, index: number) => (
           <li
             key={index}
-            className="text-sm text-[#000000]/70 mt-4 before:content-['✓'] before:text-[#000000]/70 before:mr-2"
+            className={`text-sm mt-4 before:content-['✓'] before:mr-2 ${
+              isPopular
+                ? "text-white/70 before:text-white/70"
+                : "text-black/70 before:text-black/70"
+            }`}
           >
             {feature}
           </li>
