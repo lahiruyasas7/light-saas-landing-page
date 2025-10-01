@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .logo-ticker-image {
+        @apply h-8 w-auto;
+    }
+
+    .section-header {
+        @apply font-bold text-center text-[32px] md:text-[54px] tracking-[-5%] leading-9 md:leading-[60px] bg-gradient-to-b from-black to-blue-800 text-transparent bg-clip-text
+    }
+
+    .section-description {
+        @apply text-center font-normal text-[22px] text-[#010D3E] tracking-[-2.5%] leading-[30px] mt-5
+    }   
+}
+
