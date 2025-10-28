@@ -66,5 +66,20 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
-  return null;
+  return (
+    <section className="w-full px-5 bg-white">
+      <div className="flex flex-col justify-center gap-4 items-center">
+        <h4 className="text-sm inline-flex border border-[#222222/10] px-3 py-1 rounded-lg">
+          Testimonials
+        </h4>
+        <div className="section-heading">
+          <h2 className="section-header">What our users say </h2>
+          <p className="section-description">
+            From intuitive design to powerful features, our app has become an
+            essential tool for users around the world.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 };
