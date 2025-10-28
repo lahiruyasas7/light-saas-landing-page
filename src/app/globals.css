@@ -13,6 +13,10 @@
 
     .section-description {
         @apply text-center font-normal text-[22px] text-[#010D3E] tracking-[-2.5%] leading-[30px] mt-5
-    }   
+    }  
+    
+    .section-heading{
+        @apply max-w-[540px] mx-auto
+    }
 }
 
