@@ -85,11 +85,11 @@ export const Testimonials = () => {
           </p>
         </div>
       </div>
-      <div className="pt-10 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+      <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
         {firstColumn?.map((data) => {
           return (
             <div
-              className=" rounded-3xl shadow-md p-10 w-[320px] max-w-sm border-2 transition-colors duration-300 mb-5"
+              className=" rounded-3xl shadow-md p-10 w-[320px] max-w-sm border-2 transition-colors duration-300"
               key={data?.username}
             >
               <p>{data?.text}</p>
