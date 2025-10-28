@@ -85,7 +85,7 @@ export const Testimonials = () => {
           </p>
         </div>
       </div>
-      <div className="pt-10">
+      <div className="pt-10 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
         {firstColumn?.map((data) => {
           return (
             <div
@@ -103,7 +103,7 @@ export const Testimonials = () => {
                 />
                 <div>
                   <h4 className="font-medium">{data?.name}</h4>
-                  <h5>{data?.username}</h5>
+                  <h5 className="tracking-tighter">{data?.username}</h5>
                 </div>
               </div>
             </div>
