@@ -93,17 +93,17 @@ export const Testimonials = () => {
         </div>
       </div>
       <div className="flex justify-center items-center gap-6">
-        <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+        <div className="testimonial-card-section">
           {firstColumn?.map((data: TestimonialsType) => {
             return <TestimonialsCol data={data} />;
           })}
         </div>
-        <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+        <div className="testimonial-card-section hidden md:block">
           {secondColumn?.map((data: TestimonialsType) => {
             return <TestimonialsCol data={data} />;
           })}
         </div>
-        <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+        <div className="testimonial-card-section hidden lg:block">
           {thirdColumn?.map((data: TestimonialsType) => {
             return <TestimonialsCol data={data} />;
           })}
