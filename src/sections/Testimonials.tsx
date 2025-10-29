@@ -79,7 +79,7 @@ const thirdColumn = testimonials.slice(6, 9);
 
 export const Testimonials = () => {
   return (
-    <section className="w-full px-5 bg-white">
+    <section className="w-full px-5 bg-white lg:pb-24 lg:px-20">
       <div className="flex flex-col justify-center gap-4 items-center">
         <h4 className="text-sm inline-flex border border-[#222222/10] px-3 py-1 rounded-lg">
           Testimonials
