@@ -13,6 +13,14 @@
 
     .section-description {
         @apply text-center font-normal text-[22px] text-[#010D3E] tracking-[-2.5%] leading-[30px] mt-5
-    }   
+    }  
+    
+    .section-heading{
+        @apply max-w-[540px] mx-auto
+    }
+
+    .testimonial-card-section {
+        @apply pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]
+    }
 }
 

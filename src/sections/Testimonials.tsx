@@ -7,6 +7,14 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import TestimonialsCol from "@/components/TestimonialsCol";
+
+export interface TestimonialsType {
+  text: string;
+  imageSrc: string;
+  name: string;
+  username: string;
+}
 
 const testimonials = [
   {
@@ -65,6 +73,42 @@ const testimonials = [
   },
 ];
 
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
+
 export const Testimonials = () => {
-  return null;
+  return (
+    <section className="w-full px-5 bg-white lg:pb-24 lg:px-20">
+      <div className="flex flex-col justify-center gap-4 items-center">
+        <h4 className="text-sm inline-flex border border-[#222222/10] px-3 py-1 rounded-lg">
+          Testimonials
+        </h4>
+        <div className="section-heading">
+          <h2 className="section-header">What our users say </h2>
+          <p className="section-description">
+            From intuitive design to powerful features, our app has become an
+            essential tool for users around the world.
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center items-center gap-6">
+        <div className="testimonial-card-section">
+          {firstColumn?.map((data: TestimonialsType) => {
+            return <TestimonialsCol data={data} />;
+          })}
+        </div>
+        <div className="testimonial-card-section hidden md:flex">
+          {secondColumn?.map((data: TestimonialsType) => {
+            return <TestimonialsCol data={data} />;
+          })}
+        </div>
+        <div className="testimonial-card-section hidden lg:flex">
+          {thirdColumn?.map((data: TestimonialsType) => {
+            return <TestimonialsCol data={data} />;
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
