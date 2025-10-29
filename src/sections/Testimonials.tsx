@@ -7,7 +7,14 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
-import Image from "next/image";
+import TestimonialsCol from "@/components/TestimonialsCol";
+
+export interface TestimonialsType {
+  text: string;
+  imageSrc: string;
+  name: string;
+  username: string;
+}
 
 const testimonials = [
   {
@@ -85,30 +92,22 @@ export const Testimonials = () => {
           </p>
         </div>
       </div>
-      <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
-        {firstColumn?.map((data) => {
-          return (
-            <div
-              className=" rounded-3xl shadow-md p-10 w-[320px] max-w-sm border-2 transition-colors duration-300"
-              key={data?.username}
-            >
-              <p>{data?.text}</p>
-              <div className="flex justify-start items-center gap-1 mt-4">
-                <Image
-                  className="w-10 h-10 rounded-full"
-                  src={data.imageSrc}
-                  alt="name"
-                  width={10}
-                  height={10}
-                />
-                <div>
-                  <h4 className="font-medium">{data?.name}</h4>
-                  <h5 className="tracking-tighter">{data?.username}</h5>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+      <div className="flex justify-center items-center gap-6">
+        <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+          {firstColumn?.map((data: TestimonialsType) => {
+            return <TestimonialsCol data={data} />;
+          })}
+        </div>
+        <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+          {secondColumn?.map((data: TestimonialsType) => {
+            return <TestimonialsCol data={data} />;
+          })}
+        </div>
+        <div className="pt-10 flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,_transparent,_black_25%,_black_75%,_transparent)]">
+          {thirdColumn?.map((data: TestimonialsType) => {
+            return <TestimonialsCol data={data} />;
+          })}
+        </div>
       </div>
     </section>
   );
