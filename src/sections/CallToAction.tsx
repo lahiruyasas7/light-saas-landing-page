@@ -2,6 +2,7 @@ import CustomButton from "@/components/CustomButton";
 import ArrowRight from "@/assets/arrow-right.svg";
 import SpringImg from "@/assets/spring.png";
 import Image from "next/image";
+import StarImg from "@/assets/star.png";
 
 export const CallToAction = () => {
   return (
@@ -28,6 +29,13 @@ export const CallToAction = () => {
         className="md:absolute hidden md:block left-[75%] top-[137px] lg:left-[68%]"
         width={363}
         height={363}
+      />
+       <Image
+        src={StarImg}
+        alt="star image"
+        className="md:absolute hidden md:block left-[-30%] top-[-45px] lg:left-[0%]"
+        width={360}
+        height={360}
       />
     </section>
   );
