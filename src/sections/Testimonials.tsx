@@ -98,12 +98,12 @@ export const Testimonials = () => {
             return <TestimonialsCol data={data} />;
           })}
         </div>
-        <div className="testimonial-card-section hidden md:block">
+        <div className="testimonial-card-section hidden md:flex">
           {secondColumn?.map((data: TestimonialsType) => {
             return <TestimonialsCol data={data} />;
           })}
         </div>
-        <div className="testimonial-card-section hidden lg:block">
+        <div className="testimonial-card-section hidden lg:flex">
           {thirdColumn?.map((data: TestimonialsType) => {
             return <TestimonialsCol data={data} />;
           })}
