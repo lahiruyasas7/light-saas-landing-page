@@ -8,11 +8,11 @@ import YoutubeImg from "@/assets/social-youtube.svg";
 
 export const Footer = () => {
   return (
-    <section className="px-5 py-10 bg-black">
+    <section className="px-5 py-10 lg:px-20 bg-black">
       <div className="flex justify-center items-center">
         <Image src={LogoImg} alt="logo image" width={40} height={40} />
       </div>
-      <nav className="flex flex-col gap-6 items-center text-[#BCBCBC] mb-6">
+      <nav className="flex flex-col md:flex-row justify-center md:mt-6 gap-6 items-center text-[#BCBCBC] mb-6">
         <a href="" className="text-[000000px] font-normal">
           About
         </a>
